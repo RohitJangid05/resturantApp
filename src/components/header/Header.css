@@ -13,7 +13,7 @@
 }
 
 .left {
-  background-image: url('/bg-left1.avif');
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -23,15 +23,27 @@
   padding-left: 30px;
   width: 65%;
   height: 100%;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 10px;
+  overflow: hidden;
 }
+.left img{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 30px;
 
+}
 .left h1 {
   font-size: 55px;
+  position: relative;
+  z-index: 1;
 }
 
 .left h4 {
+  position: relative;
+  z-index: 1;
   font-size: 20px;
   width: 80%;
   height: 15vh;
@@ -39,7 +51,6 @@
 }
 
 .right {
-  background-image: url('./bg-right.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -49,11 +60,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 10px;
   transition: all 0.3s linear;
 }
-
+.right img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 10px;
+}
 .right::after {
   overflow: auto;
   top: 20%;

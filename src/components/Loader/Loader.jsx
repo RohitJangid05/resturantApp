@@ -9,15 +9,15 @@ const Loader = () => {
         <div className="loading-title">
           <h1>Foodezy</h1>
         </div>
-        <div class="loading">
-          <img loading='lazy' alt='loading-images' src={assets.cake} class="loader-img" />
-          <img loading='lazy' alt='loading-images' src={assets.noodels} class="loader-img" />
-          <img loading='lazy' alt='loading-images' src={assets.pulao} class="loader-img" />
-          <img loading='lazy' alt='loading-images' src={assets.desertA} class="loader-img" />
-          <img loading='lazy' alt='loading-images' src={assets.sandwich} class="loader-img img-none" />
-          <img loading='lazy' alt='loading-images' src={assets.rolls} class="loader-img img-none" />
-          <img loading='lazy' alt='loading-images' src={assets.pasta} class="loader-img img-none" />
-          <img loading='lazy' alt='loading-images' src={assets.desert} class="loader-img img-none" />
+        <div className="loading">
+          <img loading='lazy' alt='loading-images' src={assets.cake} className="loader-img" />
+          <img loading='lazy' alt='loading-images' src={assets.noodels} className="loader-img" />
+          <img loading='lazy' alt='loading-images' src={assets.pulao} className="loader-img" />
+          <img loading='lazy' alt='loading-images' src={assets.desertA} className="loader-img" />
+          <img loading='lazy' alt='loading-images' src={assets.sandwich} className="loader-img img-none" />
+          <img loading='lazy' alt='loading-images' src={assets.rolls} className="loader-img img-none" />
+          <img loading='lazy' alt='loading-images' src={assets.pasta} className="loader-img img-none" />
+          <img loading='lazy' alt='loading-images' src={assets.desert} className="loader-img img-none" />
         </div>
       </div>
     </>

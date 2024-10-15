@@ -58,18 +58,18 @@ const Header = () => {
   return (
     <div className="container">
       <div className="imageHolder">
-        <div
-          className="left"
-          style={{ backgroundImage: `url(${leftBgImage})` }} 
-        >
+        <div className="left">
           <h1>WELCOME TO FOODEZY</h1>
           <h4 id="description">{descriptions[currentIndex]}</h4>
+          <img loading='lazy' src={leftBgImage} alt="" />
         </div>
-        <div className={`right ${updateImageClass()} ${isActive ? 'active' : ''}`} />
+        <div className={`right ${updateImageClass()} ${isActive ? 'active' : ''}`} >
+          <img loading='lazy' src="./bg-right.jpg" alt="" />
+        </div>
       </div>
       <div className="btn">
         <button id="prev" onClick={handlePrev}> <FontAwesomeIcon icon={faChevronLeft} /></button>
-        <button id="next" onClick={handleNext}><FontAwesomeIcon icon={faChevronRight} /></button>
+        <button id="next" onClick={handleNext}> <FontAwesomeIcon icon={faChevronRight} /></button>
       </div>
     </div>
   );
