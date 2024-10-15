@@ -1,0 +1,200 @@
+.container {
+  position: relative;
+  width: 80vw;
+  height: 65vh;
+  color: white;
+  margin-bottom: 70px;
+}
+
+.imageHolder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.left {
+  background-image: url('/bg-left1.avif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 30px;
+  width: 65%;
+  height: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 10px;
+}
+
+.left h1 {
+  font-size: 55px;
+}
+
+.left h4 {
+  font-size: 20px;
+  width: 80%;
+  height: 15vh;
+  font-weight: 300;
+}
+
+.right {
+  background-image: url('./bg-right-img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 10px;
+  transition: all 0.3s linear;
+}
+
+.right::after {
+  overflow: auto;
+  top: 20%;
+  left: 15%;
+  position: absolute;
+  content: "";
+  width: 70%;
+  height: 60%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+}
+
+.right.image1::after {
+  background-image: url('/slide1.webp');
+}
+
+.right.image2::after {
+  background-image: url('/slide2.png');
+}
+
+.right.image3::after {
+  background-image: url('/slide3.png');
+}
+
+.right.active::after {
+  left: 150%;
+  transform: rotate(360deg);
+}
+
+.btn {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Button styles */
+.btn button {
+  width: 10%;
+  height: 5vh;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn button:hover {
+  background-color: #b7b7b7;
+}
+
+@media (max-width:1300px) {
+  .container {
+    height: 55vh;
+  }
+  
+  .left h1 {
+    font-size: 50px;
+  }
+
+  .left h4 {
+    font-size: 18px;
+  }
+
+  .right::after {
+    top: 22%;
+    left: 17%;
+    width: 65%;
+    height: 55%;
+  }
+}
+
+@media (max-width:1180px) {
+  .container {
+    height: 45vh;
+
+  }
+  .left h1 {
+    font-size: 45px;
+  }
+
+  .left h4 {
+    font-size: 15px;
+  }
+
+  .right::after {
+    top: 26%;
+    left: 22%;
+    width: 55%;
+    height: 45%;
+  }
+}
+@media (max-width:980px) {
+  .container {
+    height: 35vh;
+  }
+  .left h1 {
+    font-size: 30px;
+  }
+
+  .left h4 {
+    font-size: 12px;
+  }
+
+  .right::after {
+    top: 30%;
+    left: 26%;
+    width: 45%;
+    height: 35%;
+  }
+}
+
+@media (max-width:580px) {
+  .container{
+    height: 30vh;
+    margin-bottom: 60px;
+  }
+  .imageHolder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .right{
+    display: none;
+  }
+  .left{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
+
+  .left h1 {
+    text-wrap: nowrap;
+    font-size: 22px;
+  }
+
+  .left h4 {
+    font-size: 10px;
+  }
+
+}
